@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="com.fasterxml">
+    <CLASSES />
+    <JAVADOC />
+    <NATIVE>
+      <root url="file://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson" />
+      <root url="file://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core" />
+      <root url="file://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson" />
+      <root url="file://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit" />
+      <root url="file://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.json" />
+    </NATIVE>
+    <SOURCES />
+  </library>
+</component>
