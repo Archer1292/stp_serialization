@@ -11,13 +11,14 @@ import java.io.*;
  */
 public class GSON<T> extends Serializer<T> {
     private Gson gson;
+    private String testString = "";
 
     public GSON(Class<T> paramClass) {
         super(paramClass);
         gson = new Gson();
     }
 
-    private String testString = "";
+
 
     public GSON(Class<T> paramClass, boolean isTest) {
         this(paramClass);

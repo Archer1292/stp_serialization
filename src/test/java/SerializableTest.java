@@ -20,7 +20,7 @@ import java.util.Map;
 public class SerializableTest {
     @Test
 
-    public void PersonTest() {
+    public void personTest() {
         String countryName = "Ukrain";
         double area = 603549d;
         String cityName = "Kyiv";

@@ -2,7 +2,6 @@ package serializers; /**
  * @author Bratus Nadja on 12/4/2017
  * @project lab5
  */
-import com.fasterxml.jackson.core.JsonProcessingException;
 import java.io.IOException;
 
 public abstract class Serializer<T> {

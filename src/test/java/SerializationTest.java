@@ -40,7 +40,7 @@ public class SerializationTest {
     }
 
     @Test
-    public void JacksonTest() {
+    public void jacksonTest() {
         try {
             Jackson jackson = new Jackson<City>(City.class, true);
             jackson.serialize(city);
@@ -52,7 +52,7 @@ public class SerializationTest {
     }
 
     @Test
-    public void OrgJSON() {
+    public void orgJSON() {
         try {
             OrgJSONforCity orgJSON = new OrgJSONforCity(true);
             orgJSON.serialize(city);

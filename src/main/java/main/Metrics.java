@@ -1,3 +1,5 @@
+package main;
+
 /**
  * @author Bratus Nadja on 12/4/2017
  * @project lab5
@@ -6,12 +8,14 @@ class Metrics {
     //private static long timeUsed = 0;
     //private static long memoryUsed = 0;
 
-    public Metrics() {}
+
 
     private static long timeStart = 0;
     private static long memoryStart = 0;
     private static long timeEnd = 0;
     private static long memoryEnd = 0;
+
+    public Metrics() {}
 
     static void start() {
         timeStart = System.nanoTime();

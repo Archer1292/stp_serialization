@@ -1,3 +1,5 @@
+package main;
+
 import serializable.City;
 import serializable.Country;
 import serializers.GSON;
