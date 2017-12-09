@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lab5.iml" filepath="$PROJECT_DIR$/.idea/modules/lab5.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lab5_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lab5_main.iml" group="lab5" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lab5_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lab5_test.iml" group="lab5" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.jacoco.examples.gradle.java.iml" filepath="$PROJECT_DIR$/.idea/modules/org.jacoco.examples.gradle.java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.jacoco.examples.gradle.java_main.iml" filepath="$PROJECT_DIR$/.idea/modules/org.jacoco.examples.gradle.java_main.iml" group="org.jacoco.examples.gradle.java" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.jacoco.examples.gradle.java_test.iml" filepath="$PROJECT_DIR$/.idea/modules/org.jacoco.examples.gradle.java_test.iml" group="org.jacoco.examples.gradle.java" />
     </modules>
   </component>
 </project>
