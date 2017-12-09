@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MainTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-12-04T07:08:56" hostname="DESKTOP-OME40IK" time="0.017">
+<testsuite name="MainTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-12-09T10:02:48" hostname="DESKTOP-OME40IK" time="0.025">
   <properties/>
-  <testcase name="getRandomPersonTest" classname="MainTest" time="0.017"/>
+  <testcase name="getRandomPersonTest" classname="MainTest" time="0.024"/>
   <testcase name="getRandonNum" classname="MainTest" time="0.0"/>
   <testcase name="getRandonString" classname="MainTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
