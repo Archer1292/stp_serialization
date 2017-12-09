@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SerializationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-12-09T12:24:52" hostname="DESKTOP-OME40IK" time="1.903">
+  <properties/>
+  <testcase name="GSONTest" classname="SerializationTest" time="0.255"/>
+  <testcase name="orgJSON" classname="SerializationTest" time="0.394"/>
+  <testcase name="jacksonTest" classname="SerializationTest" time="1.254"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

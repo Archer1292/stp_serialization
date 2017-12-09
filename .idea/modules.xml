@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lab5.iml" filepath="$PROJECT_DIR$/.idea/modules/lab5.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lab5_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lab5_main.iml" group="lab5" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lab5_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lab5_test.iml" group="lab5" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stp_serialization.iml" filepath="$PROJECT_DIR$/.idea/modules/stp_serialization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stp_serialization_main.iml" filepath="$PROJECT_DIR$/.idea/modules/stp_serialization_main.iml" group="stp_serialization" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stp_serialization_test.iml" filepath="$PROJECT_DIR$/.idea/modules/stp_serialization_test.iml" group="stp_serialization" />
     </modules>
   </component>
 </project>

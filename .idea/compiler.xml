@@ -6,6 +6,8 @@
       <module name="lab5_test" target="1.8" />
       <module name="org.jacoco.examples.gradle.java_main" target="1.8" />
       <module name="org.jacoco.examples.gradle.java_test" target="1.8" />
+      <module name="stp_serialization_main" target="1.8" />
+      <module name="stp_serialization_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
