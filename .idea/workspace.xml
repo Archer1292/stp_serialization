@@ -2,22 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9c391f0-ff4e-48f3-af38-fde6f0c39708" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/org.jacoco.examples.gradle.java.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/org.jacoco.examples.gradle.java_main.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/org.jacoco.examples.gradle.java_test.iml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/lab5.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/lab5_main.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/lab5_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/fileContent.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.7.8.jar_23snh2vqmxu3q93hrbeir8002/META-INF/maven/org.jacoco/org.jacoco.agent/pom.properties" afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.7.8.jar_23snh2vqmxu3q93hrbeir8002/META-INF/maven/org.jacoco/org.jacoco.agent/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.7.8.jar_23snh2vqmxu3q93hrbeir8002/META-INF/maven/org.jacoco/org.jacoco.agent/pom.xml" afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.7.8.jar_23snh2vqmxu3q93hrbeir8002/META-INF/maven/org.jacoco/org.jacoco.agent/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.7.8.jar_23snh2vqmxu3q93hrbeir8002/about.html" afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.7.8.jar_23snh2vqmxu3q93hrbeir8002/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -534,7 +530,9 @@
     <option name="width" value="1300" />
     <option name="height" value="740" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -811,8 +809,16 @@
       <workItem from="1512761626548" duration="1097000" />
       <workItem from="1512809428425" duration="848000" />
       <workItem from="1512812037051" duration="1940000" />
-      <workItem from="1512819910441" duration="171000" />
+      <workItem from="1512819910441" duration="226000" />
     </task>
+    <task id="LOCAL-00001" summary="-">
+      <created>1512820141277</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1512820141277</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -830,7 +836,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9802000" />
+    <option name="totallyTimeSpent" value="9857000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -870,6 +876,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="-" />
+    <option name="LAST_COMMIT_MESSAGE" value="-" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
