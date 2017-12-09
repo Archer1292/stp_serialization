@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MetrixTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-12-09T12:24:52" hostname="DESKTOP-OME40IK" time="0.0">
+<testsuite name="MetrixTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-12-09T15:36:58" hostname="DESKTOP-OME40IK" time="0.0">
   <properties/>
   <testcase name="testMetrixTime" classname="MetrixTest" time="0.0"/>
   <testcase name="testMetrixMemory" classname="MetrixTest" time="0.0"/>
