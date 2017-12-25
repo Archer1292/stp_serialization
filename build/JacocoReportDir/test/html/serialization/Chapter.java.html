@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Chapter.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MTP_Lab5</a> &gt; <a href="index.source.html" class="el_package">serialization</a> &gt; <span class="el_source">Chapter.java</span></div><h1>Chapter.java</h1><pre class="source lang-java linenums">package serialization;
+
+public class Chapter {
+    private short page;
+    private String title;
+    private String text;
+
+    public String getTitle() {
+<span class="fc" id="L9">        return title;</span>
+    }
+    public String getText() {
+<span class="fc" id="L12">        return text;</span>
+    }
+    public short getPage() {
+<span class="fc" id="L15">        return page;</span>
+    }
+
+<span class="fc" id="L18">    public Chapter () {this((short)0, &quot;Unknown&quot;, &quot;Unknown&quot;);}</span>
+<span class="fc" id="L19">    public Chapter(short page, String title, String text) {</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        if (page &gt; 0)</span>
+<span class="fc" id="L21">            this.page = page;</span>
+<span class="fc" id="L22">        this.title = title;</span>
+<span class="fc" id="L23">        this.text = text;</span>
+<span class="fc" id="L24">    }</span>
+
+<span class="fc" id="L26">    public Chapter clone() { return new Chapter(this.page, this.title, this.text); }</span>
+
+    @Override
+    public String toString() {
+<span class="fc" id="L30">        return &quot;\'&quot; + title + &quot;\' at page &quot; + page;</span>
+    }
+
+    public boolean equals(Chapter chapter) {
+<span class="pc bpc" id="L34" title="1 of 6 branches missed.">        return this.page == chapter.page &amp;&amp; this.title.equals(chapter.title) &amp;&amp; this.text.equals(chapter.text);</span>
+    }
+    @Override
+    public boolean equals(Object object) {
+<span class="pc bpc" id="L38" title="1 of 4 branches missed.">        return (object instanceof Chapter) &amp;&amp; (this.equals((Chapter)object));</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

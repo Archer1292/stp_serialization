@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.JacksonSerializationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-12-25T19:34:18" hostname="DESKTOP-OME40IK" time="1.051">
+  <properties/>
+  <testcase name="serializationEmpty" classname="tests.JacksonSerializationTest" time="1.003"/>
+  <testcase name="serialization" classname="tests.JacksonSerializationTest" time="0.048"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

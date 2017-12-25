@@ -1,0 +1,19 @@
+[ "serialization.Book", {
+  "pageCount" : 200,
+  "name" : "myBook",
+  "author" : "me",
+  "chapters" : [ "java.util.ArrayList", [ [ "serialization.Chapter", {
+    "page" : 1,
+    "title" : "Introduction",
+    "text" : "bla-bla"
+  } ], [ "serialization.Chapter", {
+    "page" : 3,
+    "title" : "Content",
+    "text" : "bla-bla"
+  } ] ] ],
+  "map" : [ "java.util.HashMap", {
+    "pageCount" : [ "java.lang.Short", 200 ],
+    "author" : "me",
+    "name" : "myBook"
+  } ]
+} ]

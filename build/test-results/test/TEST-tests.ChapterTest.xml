@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.ChapterTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-12-25T19:34:18" hostname="DESKTOP-OME40IK" time="0.002">
+  <properties/>
+  <testcase name="testEmptyClone" classname="tests.ChapterTest" time="0.0"/>
+  <testcase name="equals" classname="tests.ChapterTest" time="0.0"/>
+  <testcase name="testClone" classname="tests.ChapterTest" time="0.0"/>
+  <testcase name="testToString" classname="tests.ChapterTest" time="0.0"/>
+  <testcase name="equalsEmpty" classname="tests.ChapterTest" time="0.0"/>
+  <testcase name="notEquals" classname="tests.ChapterTest" time="0.0"/>
+  <testcase name="createWIthNegativePage" classname="tests.ChapterTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Book.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MTP_Lab5</a> &gt; <a href="index.source.html" class="el_package">serialization</a> &gt; <span class="el_source">Book.java</span></div><h1>Book.java</h1><pre class="source lang-java linenums">package serialization;
+
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.List;
+
+public class Book {
+    private short pageCount;
+    final private String name;
+    final private String author;
+    final private List&lt;Chapter&gt; chapters;
+    private Map&lt;String, Object&gt; map;
+
+    public short getPageCount() {
+<span class="fc" id="L16">        return pageCount;</span>
+    }
+    public String getName() {
+<span class="fc" id="L19">        return name;</span>
+    }
+    public String getAuthor() {
+<span class="fc" id="L22">        return author;</span>
+    }
+    public List&lt;Chapter&gt; getChapters() {
+<span class="fc" id="L25">        return chapters;</span>
+    }
+    public Map&lt;String, Object&gt; getMap() {
+<span class="fc" id="L28">        return map;</span>
+    }
+
+<span class="fc" id="L31">    public Book() {this((short) 0, &quot;Unknown&quot;, &quot;Unknown&quot;);}</span>
+    public Book(short pageCount, String name, String author) {
+<span class="fc" id="L33">        this(pageCount, name, author, null);</span>
+<span class="fc" id="L34">    }</span>
+<span class="fc" id="L35">    public Book(short pageCount, String name, String author, List&lt;Chapter&gt; chapters) {</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">        if (pageCount &gt; 0)</span>
+<span class="fc" id="L37">            this.pageCount = pageCount;</span>
+<span class="fc" id="L38">        this.name = name;</span>
+<span class="fc" id="L39">        this.author =  author;</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        if (chapters == null)</span>
+<span class="fc" id="L41">            this.chapters = new ArrayList&lt;&gt;();</span>
+        else
+<span class="fc" id="L43">            this.chapters = chapters;</span>
+<span class="fc" id="L44">        initMap();</span>
+<span class="fc" id="L45">    }</span>
+    @SuppressWarnings(&quot;unchecked&quot;)
+    private void initMap() {
+<span class="fc" id="L48">        map = new HashMap();</span>
+<span class="fc" id="L49">        map.put(&quot;pageCount&quot;, pageCount);</span>
+<span class="fc" id="L50">        map.put(&quot;name&quot;, name);</span>
+<span class="fc" id="L51">        map.put(&quot;author&quot;, author);</span>
+<span class="fc" id="L52">    }</span>
+
+    public void addChapter(Chapter chapter) {
+<span class="fc" id="L55">        chapters.add(chapter);</span>
+<span class="fc" id="L56">    }</span>
+    public void addChapter(short page, String name, String text) {
+<span class="fc" id="L58">        addChapter(new Chapter(page, name, text));</span>
+<span class="fc" id="L59">    }</span>
+
+    @Override
+    public String toString() {
+<span class="fc" id="L63">        return &quot;\'&quot; + name + &quot;\' written by &quot; + author + &quot;, &quot; + chapters.size() + &quot; chapter(s), &quot; + pageCount + &quot;p.&quot;;</span>
+    }
+
+    public Book clone() {
+<span class="fc" id="L67">        ArrayList&lt;Chapter&gt; chapters = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L68" title="All 2 branches covered.">        for (Chapter chapter:this.chapters)</span>
+<span class="fc" id="L69">            chapters.add(chapter.clone());</span>
+<span class="fc" id="L70">        return new Book(this.pageCount, this.name, this.author, chapters);</span>
+    }
+
+    public boolean equals(Book book) {
+<span class="pc bpc" id="L74" title="2 of 6 branches missed.">        if (this.pageCount == book.pageCount &amp;&amp; this.name.equals(book.name) &amp;&amp; this.author.equals(book.author)</span>
+<span class="pc bpc" id="L75" title="2 of 4 branches missed.">            &amp;&amp; this.chapters.size() == book.chapters.size() &amp;&amp; this.map.equals(book.getMap())) {</span>
+<span class="fc bfc" id="L76" title="All 2 branches covered.">            for (int i = 0; i &lt; this.chapters.size(); i++)</span>
+<span class="fc bfc" id="L77" title="All 2 branches covered.">                if (!chapters.get(i).equals(book.chapters.get(i)))</span>
+<span class="fc" id="L78">                    return false;</span>
+<span class="fc" id="L79">            return true;</span>
+        }
+
+<span class="fc" id="L82">        return false;</span>
+    }
+    @Override
+    public boolean equals(Object object) {
+<span class="pc bpc" id="L86" title="1 of 4 branches missed.">        return (object instanceof Book) &amp;&amp; (this.equals((Book)object));</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

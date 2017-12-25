@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.MainTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-12-25T19:34:19" hostname="DESKTOP-OME40IK" time="0.314">
+  <properties/>
+  <testcase name="main" classname="tests.MainTest" time="0.314"/>
+  <system-out><![CDATA[serialization.JacksonSerialization
+59064506 nanosec
+Memory used: 3618808 B 
+31047067 nanosec
+Memory used: 3219984 B 
+35328018 nanosec
+Memory used: 3221304 B 
+serialization.GSONSerialization
+6410572 nanosec
+Memory used: 2677528 B 
+6583864 nanosec
+Memory used: 2678784 B 
+7659923 nanosec
+Memory used: 2680112 B 
+serialization.JSONSerialization
+9551516 nanosec
+Memory used: 2679168 B 
+4365821 nanosec
+Memory used: 2677480 B 
+4532006 nanosec
+Memory used: 2678536 B 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

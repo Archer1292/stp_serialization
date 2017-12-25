@@ -1,0 +1,22 @@
+{
+    "pageCount": 200,
+    "chapters": [
+        {
+            "text": "bla-bla",
+            "page": 1,
+            "title": "Introduction"
+        },
+        {
+            "text": "bla-bla",
+            "page": 3,
+            "title": "Content"
+        }
+    ],
+    "author": "me",
+    "name": "myBook",
+    "map": {
+        "pageCount": 200,
+        "author": "me",
+        "name": "myBook"
+    }
+}

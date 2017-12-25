@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>GSONSerialization.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MTP_Lab5</a> &gt; <a href="index.source.html" class="el_package">serialization</a> &gt; <span class="el_source">GSONSerialization.java</span></div><h1>GSONSerialization.java</h1><pre class="source lang-java linenums">package serialization;
+
+import com.google.gson.*;
+import com.google.gson.internal.LinkedTreeMap;
+import com.google.gson.reflect.TypeToken;
+import java.io.*;
+import java.util.*;
+import java.lang.reflect.Type;
+
+<span class="fc" id="L10">public class GSONSerialization implements Serializable {</span>
+    @Override
+    public void bookSerialize(Book book) throws IOException {
+<span class="pc" id="L13">        try (FileWriter writer = new FileWriter(&quot;bookGSON.json&quot;)) {</span>
+<span class="fc" id="L14">            Gson gson = new GsonBuilder().setPrettyPrinting().create();</span>
+<span class="fc" id="L15">            gson.toJson(book, writer);</span>
+<span class="pc bpc" id="L16" title="6 of 8 branches missed.">        }</span>
+<span class="fc" id="L17">    }</span>
+
+    @Override
+    public Book bookDeserialize() throws IOException {
+<span class="pc" id="L21">        try (FileReader reader = new FileReader(&quot;bookGSON.json&quot;)) {</span>
+<span class="fc" id="L22">            Gson gson = new GsonBuilder().enableComplexMapKeySerialization().registerTypeAdapter(new TypeToken&lt;Map &lt;String, Object&gt;&gt;(){}.getType(),  new MapDeserializerDoubleAsIntFix()).setPrettyPrinting().create();</span>
+<span class="fc" id="L23">            return gson.fromJson(reader, Book.class);</span>
+<span class="pc bpc" id="L24" title="6 of 8 branches missed.">        }</span>
+    }
+<span class="fc" id="L26">    static class MapDeserializerDoubleAsIntFix implements JsonDeserializer&lt;Map&lt;String, Object&gt;&gt; {</span>
+        @Override  @SuppressWarnings(&quot;unchecked&quot;)
+        public Map&lt;String, Object&gt; deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
+<span class="fc" id="L29">            return (Map&lt;String, Object&gt;) read(json);</span>
+        }
+
+        Object read(JsonElement element) {
+<span class="fc bfc" id="L33" title="All 2 branches covered.">            if (element.isJsonObject()){</span>
+<span class="fc" id="L34">                Map&lt;String, Object&gt; map = new LinkedTreeMap&lt;&gt;();</span>
+<span class="fc" id="L35">                JsonObject obj = element.getAsJsonObject();</span>
+<span class="fc" id="L36">                Set&lt;Map.Entry&lt;String, JsonElement&gt;&gt; entitySet = obj.entrySet();</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">                for(Map.Entry&lt;String, JsonElement&gt; entry: entitySet)</span>
+<span class="fc" id="L38">                    map.put(entry.getKey(), read(entry.getValue()));</span>
+<span class="fc" id="L39">                return map;</span>
+            }
+<span class="pc bpc" id="L41" title="1 of 2 branches missed.">            else if (element.isJsonPrimitive()) {</span>
+<span class="fc" id="L42">                JsonPrimitive prim = element.getAsJsonPrimitive();</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">                if (prim.isString())</span>
+<span class="fc" id="L44">                    return prim.getAsString();</span>
+<span class="pc bpc" id="L45" title="1 of 2 branches missed.">                else if (prim.isNumber()) {</span>
+<span class="fc" id="L46">                    Number num = prim.getAsNumber();</span>
+<span class="pc bpc" id="L47" title="1 of 2 branches missed.">                    if(Math.ceil(num.doubleValue())  == num.shortValue())</span>
+<span class="fc" id="L48">                        return num.shortValue();</span>
+                }
+            }
+<span class="nc" id="L51">            return null;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Main.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MTP_Lab5</a> &gt; <a href="index.source.html" class="el_package">serialization</a> &gt; <span class="el_source">Main.java</span></div><h1>Main.java</h1><pre class="source lang-java linenums">package serialization;
+
+import org.json.simple.parser.ParseException;
+import java.io.IOException;
+
+<span class="fc" id="L6">public class Main {</span>
+    public static void main(String args[]){
+<span class="fc" id="L8">        Book bookOriginal = new Book((short)200, &quot;myBook&quot;, &quot;me&quot;);</span>
+<span class="fc" id="L9">        bookOriginal.addChapter(new Chapter((short)1, &quot;Introduction&quot;, &quot;bla-bla&quot;));</span>
+<span class="fc" id="L10">        bookOriginal.addChapter((short)3, &quot;Content&quot;, &quot;bla-bla&quot;);</span>
+
+<span class="fc" id="L12">        Book bookCopied = bookOriginal.clone();</span>
+        Serializable tester;
+<span class="fc" id="L14">        long time = 0;</span>
+
+<span class="fc" id="L16">        tester = new JacksonSerialization();</span>
+<span class="fc" id="L17">        testSerialization(bookOriginal, bookCopied, tester, time);</span>
+
+<span class="fc" id="L19">        tester = new GSONSerialization();</span>
+<span class="fc" id="L20">        testSerialization(bookOriginal, bookCopied, tester, time);</span>
+
+<span class="fc" id="L22">        tester = new JSONSerialization();</span>
+<span class="fc" id="L23">        testSerialization(bookOriginal, bookCopied, tester, time);</span>
+<span class="fc" id="L24">    }</span>
+
+    private static void testSerialization(Book bookOriginal, Book bookCopied, Serializable tester, long time) {
+<span class="fc" id="L27">        System.out.println(tester.getClass().getName());</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">        for (int i = 0; i &lt; 3; i++) {</span>
+<span class="fc" id="L29">            time = System.nanoTime();</span>
+<span class="fc" id="L30">            toFile(tester, bookCopied);</span>
+<span class="fc" id="L31">            bookCopied = fromFile(tester);</span>
+<span class="fc" id="L32">            System.out.println((System.nanoTime() - time) + &quot; nanosec&quot;);</span>
+<span class="fc" id="L33">            memoryConsumption();</span>
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">            if (!bookOriginal.equals(bookCopied))</span>
+<span class="nc" id="L35">                System.out.println(&quot;ERROR&quot;);</span>
+        }
+<span class="fc" id="L37">    }</span>
+
+    private static void toFile(Serializable tester, Book book) {
+<span class="fc" id="L40">        try { tester.bookSerialize(book); }</span>
+<span class="pc" id="L41">        catch (IOException e) { e.printStackTrace(); }</span>
+<span class="fc" id="L42">    }</span>
+
+    private static Book fromFile(Serializable tester) {
+<span class="fc" id="L45">        Book book = new Book();</span>
+<span class="fc" id="L46">        try { book = tester.bookDeserialize(); }</span>
+<span class="pc" id="L47">        catch (IOException | ParseException e) { e.printStackTrace(); }</span>
+<span class="fc" id="L48">        return book;</span>
+    }
+
+    private static void memoryConsumption() {
+<span class="fc" id="L52">        Runtime runtime = Runtime.getRuntime();</span>
+<span class="fc" id="L53">        runtime.gc();</span>
+<span class="fc" id="L54">        long memory = runtime.totalMemory() - runtime.freeMemory();</span>
+<span class="fc" id="L55">        System.out.printf(&quot;Memory used: %d B \n&quot;, memory);</span>
+<span class="fc" id="L56">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
