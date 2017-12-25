@@ -1,50 +1,47 @@
-import serializable.*;
+import data.Address;
+import data.Person;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import serializers.GSON;
 import serializers.Jackson;
-import serializers.OrgJSONforCity;
+import serializers.OrgJSONforPerson;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @author Bratus Nadja on 5/4/2017
- * @project lab5
- */
 public class SerializationTest {
-    City city;
+    Person person;
 
     @Before
     public void before() {
-        String cityName = "Lviv";
-        int population = 2500;
-        String countryName = "Ukrain";
-        double area = 1334.3;
+        String name = "Den";
+        int age = 25;
+        String street = "Street";
+        int building = 13;
         Map<String, String> map = new HashMap<String, String>();
-        map.put("+38054", "Frankivsk");
-        map.put("+38052", "Ternopil");
+        map.put("+3805487248", "Joe");
+        map.put("+3809865458", "Rick");
 
-        City city = new City();
-        Country country = new Country();
-        city.setName(cityName);
-        city.setPopulation(population);
-        city.setNeighbors(map);
-        country.setName(countryName);
-        country.setArea(area);
-        city.setCountry(country);
+        Person person = new Person();
+        Address address = new Address();
+        person.setName(name);
+        person.setAge(age);
+        person.setFriends(map);
+        address.setStreet(street);
+        address.setBuilding(building);
+        person.setAddress(address);
 
-        this.city = city;
+        this.person = person;
     }
 
     @Test
-    public void jacksonTest() {
+    public void JacksonTest() {
         try {
-            Jackson jackson = new Jackson<City>(City.class, true);
-            jackson.serialize(city);
-            Assert.assertEquals(city, jackson.deserialize());
+            Jackson jackson = new Jackson<Person>(Person.class, true);
+            jackson.serialize(person);
+            Assert.assertEquals(person, jackson.deserialize());
         } catch (IOException e) {
             e.printStackTrace();
             Assert.fail();
@@ -52,11 +49,11 @@ public class SerializationTest {
     }
 
     @Test
-    public void orgJSON() {
+    public void OrgJSON() {
         try {
-            OrgJSONforCity orgJSON = new OrgJSONforCity(true);
-            orgJSON.serialize(city);
-            Assert.assertEquals(city, orgJSON.deserialize());
+            OrgJSONforPerson orgJSON = new OrgJSONforPerson(true);
+            orgJSON.serialize(person);
+            Assert.assertEquals(person, orgJSON.deserialize());
         } catch (IOException e) {
             e.printStackTrace();
             Assert.fail();
@@ -66,9 +63,9 @@ public class SerializationTest {
     @Test
     public void GSONTest() {
         try {
-            GSON gson = new GSON<City>(City.class, true);
-            gson.serialize(city);
-            Assert.assertEquals(city, gson.deserialize());
+            GSON gson = new GSON<Person>(Person.class, true);
+            gson.serialize(person);
+            Assert.assertEquals(person, gson.deserialize());
         } catch (IOException e) {
             e.printStackTrace();
             Assert.fail();

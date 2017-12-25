@@ -1,14 +1,10 @@
-import main.Main;
 import org.junit.Assert;
 import org.junit.Test;
-/**
- * @author Bratus Nadja on 10/4/2017
- * @project lab5
- */
+
 public class MainTest {
     @Test
     public void getRandomPersonTest() {
-        Assert.assertNotNull(Main.getRandomCyity());
+        Assert.assertNotNull(Main.getRandomPerson());
     }
 
     @Test

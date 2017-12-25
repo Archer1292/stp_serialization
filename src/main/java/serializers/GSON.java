@@ -1,24 +1,17 @@
 package serializers;
 
 import com.google.gson.Gson;
-import serializers.Serializer;
-
 import java.io.*;
 
-/**
- * @author Bratus Nadja on 1/4/2017
- * @project lab5
- */
-public class GSON<T> extends Serializer<T> {
+public class GSON<T> extends Serializer<T>{
     private Gson gson;
-    private String testString = "";
 
     public GSON(Class<T> paramClass) {
         super(paramClass);
         gson = new Gson();
     }
 
-
+    private String testString = "";
 
     public GSON(Class<T> paramClass, boolean isTest) {
         this(paramClass);

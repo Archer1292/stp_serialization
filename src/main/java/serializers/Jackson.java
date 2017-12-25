@@ -1,13 +1,10 @@
 package serializers;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
-
-/**
- * @author Bratus Nadja on 12/4/2017
- * @project lab5
- */
 
 public class Jackson<T> extends Serializer<T>{
     private ObjectMapper mapper;
